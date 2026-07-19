@@ -1,147 +1,720 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Join TRADE WITH SUNIL</title>
-  <meta name="description" content="Join our high-accuracy stock/forex tips Telegram channel. Limited spots. 100% free demo.">
-  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hitu</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: #0e0e0e;
-      color: #ffffff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      padding: 20px;
-      animation: fadeIn 1s ease-in;
-    }
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1006506202188708');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1006506202188708&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 
-    @keyframes fadeIn {
-      0% { opacity: 0; transform: translateY(20px); }
-      100% { opacity: 1; transform: translateY(0); }
-    }
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 
-    .container {
-      background: #1a1a1a;
-      padding: 30px 20px;
-      max-width: 420px;
-      width: 100%;
-      border-radius: 20px;
-      box-shadow: 0 0 20px rgba(0,255,150,0.2);
-      text-align: center;
-      animation: fadeUp 1s ease-out;
-    }
+:root{
+  --gold-1:#FACC15;
+  --gold-2:#EAB308;
+  --gold-3:#CA8A04;
+  --gold-glow:rgba(250,204,21,.15);
+  --gold-glow-strong:rgba(250,204,21,.3);
+  --dark-1:#030303;
+  --dark-2:#050505;
+  --dark-3:#0A0A0A;
+  --dark-4:#111111;
+  --dark-5:#1A1A1A;
+  --text-primary:#FFFFFF;
+  --text-secondary:#A1A1AA;
+  --text-dim:#52525B;
+}
 
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
+html{scroll-behavior:smooth}
 
-    .logo {
-      width: 100px;
-      margin-bottom: 20px;
-      border-radius: 50%;
-      border: 2px solid #00ffaa;
-    }
+body{
+  font-family:'Inter',sans-serif;
+  background:var(--dark-1);
+  color:var(--text-primary);
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow-x:hidden;
+  padding:20px 16px;
+  position:relative;
+}
 
-    h1 {
-      font-size: 1.6rem;
-      color: #00ffaa;
-      margin-bottom: 10px;
-    }
+/* ===== ANIMATED GRID BACKGROUND ===== */
+body::before{
+  content:'';
+  position:fixed;
+  inset:0;
+  background-image:
+    linear-gradient(rgba(250,204,21,.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(250,204,21,.03) 1px, transparent 1px);
+  background-size:60px 60px;
+  mask-image:radial-gradient(ellipse 60% 50% at 50% 50%,#000 30%,transparent 100%);
+  -webkit-mask-image:radial-gradient(ellipse 60% 50% at 50% 50%,#000 30%,transparent 100%);
+  pointer-events:none;
+  z-index:0;
+}
 
-    .section-title {
-      font-size: 1.2rem;
-      font-weight: bold;
-      color: #00ffaa;
-      margin: 20px 0 10px;
-    }
+/* ===== FLOATING PARTICLES ===== */
+.particles{
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  z-index:0;
+  overflow:hidden;
+}
 
-    .benefit-text {
-      font-size: 0.95rem;
-      margin: 6px 0;
-      color: #ddd;
-    }
+.particle{
+  position:absolute;
+  width:3px;height:3px;
+  background:var(--gold-1);
+  border-radius:50%;
+  opacity:0;
+  animation:floatUp linear infinite;
+}
 
-    p {
-      font-size: 1rem;
-      margin: 10px 0 20px;
-    }
+@keyframes floatUp{
+  0%{opacity:0;transform:translateY(100vh) scale(0)}
+  10%{opacity:.6}
+  90%{opacity:.6}
+  100%{opacity:0;transform:translateY(-10vh) scale(1)}
+}
 
-    .cta-btn {
-      background-color: #00ffaa;
-      color: #000;
-      border: none;
-      padding: 14px 28px;
-      font-size: 1rem;
-      border-radius: 10px;
-      cursor: pointer;
-      font-weight: bold;
-      animation: pulse 1.6s infinite;
-      transition: transform 0.3s ease;
-      margin-top: 20px;
-    }
+/* ===== RADIAL GLOW ===== */
+.glow-orb{
+  position:fixed;
+  width:600px;height:600px;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(250,204,21,.06) 0%,transparent 70%);
+  top:50%;left:50%;
+  transform:translate(-50%,-50%);
+  pointer-events:none;
+  z-index:0;
+  animation:orbPulse 4s ease-in-out infinite;
+}
 
-    .cta-btn:hover {
-      transform: scale(1.05);
-    }
+@keyframes orbPulse{
+  0%,100%{opacity:.5;transform:translate(-50%,-50%) scale(1)}
+  50%{opacity:1;transform:translate(-50%,-50%) scale(1.1)}
+}
 
-    @keyframes pulse {
-      0% { box-shadow: 0 0 0 0 rgba(0, 255, 170, 0.7); }
-      70% { box-shadow: 0 0 0 15px rgba(0, 255, 170, 0); }
-      100% { box-shadow: 0 0 0 0 rgba(0, 255, 170, 0); }
-    }
+/* ===== MAIN CARD ===== */
+.card{
+  position:relative;
+  z-index:1;
+  width:100%;
+  max-width:440px;
+  background:rgba(5,5,5,.8);
+  backdrop-filter:blur(24px);
+  -webkit-backdrop-filter:blur(24px);
+  border:1px solid rgba(250,204,21,.08);
+  border-radius:24px;
+  padding:36px 28px 28px;
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,.03),
+    0 25px 60px -12px rgba(0,0,0,.8),
+    0 0 80px -20px rgba(250,204,21,.1);
+  animation:cardIn .8s cubic-bezier(.16,1,.3,1) both;
+}
 
-    .countdown {
-      font-size: 0.95rem;
-      margin-top: 15px;
-      color: #ffcc00;
-    }
+@keyframes cardIn{
+  0%{opacity:0;transform:translateY(30px) scale(.96)}
+  100%{opacity:1;transform:translateY(0) scale(1)}
+}
 
-    .disclaimer {
-      font-size: 0.8rem;
-      color: #888;
-      margin-top: 20px;
-    }
-  </style>
+/* Gold shimmer border on hover */
+.card::before{
+  content:'';
+  position:absolute;
+  inset:-1px;
+  border-radius:25px;
+  background:conic-gradient(from var(--shimmer-angle,0deg),transparent 60%,rgba(250,204,21,.25) 75%,transparent 90%);
+  z-index:-1;
+  opacity:0;
+  transition:opacity .5s;
+}
+
+.card:hover::before{
+  opacity:1;
+  animation:shimmer 3s linear infinite;
+}
+
+@keyframes shimmer{
+  to{--shimmer-angle:360deg}
+}
+
+@property --shimmer-angle{
+  syntax:'<angle>';
+  initial-value:0deg;
+  inherits:false;
+}
+
+/* ===== LOGO ===== */
+.logo-wrap{
+  position:relative;
+  width:88px;height:88px;
+  margin:0 auto 20px;
+  animation:logoIn 1s .2s cubic-bezier(.16,1,.3,1) both;
+}
+
+@keyframes logoIn{
+  0%{opacity:0;transform:scale(.5) rotate(-10deg)}
+  100%{opacity:1;transform:scale(1) rotate(0)}
+}
+
+.logo-ring{
+  position:absolute;
+  inset:-4px;
+  border-radius:50%;
+  border:2px solid transparent;
+  background:conic-gradient(from 0deg,var(--gold-1),var(--gold-3),var(--gold-1)) border-box;
+  -webkit-mask:linear-gradient(#fff 0 0) padding-box,linear-gradient(#fff 0 0);
+  mask:linear-gradient(#fff 0 0) padding-box,linear-gradient(#fff 0 0);
+  -webkit-mask-composite:xor;
+  mask-composite:exclude;
+  animation:ringRotate 4s linear infinite;
+}
+
+@keyframes ringRotate{
+  to{transform:rotate(360deg)}
+}
+
+.logo-inner{
+  width:88px;height:88px;
+  border-radius:50%;
+  overflow:hidden;
+  background:var(--dark-3);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+}
+
+.logo-inner img{
+  width:100%;height:100%;object-fit:cover;
+}
+
+.logo-glow{
+  position:absolute;
+  inset:-12px;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(250,204,21,.2) 0%,transparent 70%);
+  z-index:-1;
+  animation:glowPulse 3s ease-in-out infinite;
+}
+
+@keyframes glowPulse{
+  0%,100%{opacity:.6;transform:scale(1)}
+  50%{opacity:1;transform:scale(1.08)}
+}
+
+/* ===== BADGE ===== */
+.badge{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  padding:6px 14px;
+  background:rgba(250,204,21,.08);
+  border:1px solid rgba(250,204,21,.15);
+  border-radius:100px;
+  font-size:11px;
+  font-weight:500;
+  color:var(--gold-1);
+  text-transform:uppercase;
+  letter-spacing:.08em;
+  margin:0 auto 16px;
+  animation:fadeUp .6s .3s cubic-bezier(.16,1,.3,1) both;
+}
+
+.badge .dot{
+  width:6px;height:6px;
+  border-radius:50%;
+  background:var(--gold-1);
+  animation:dotBlink 2s ease-in-out infinite;
+}
+
+@keyframes dotBlink{
+  0%,100%{opacity:1}
+  50%{opacity:.3}
+}
+
+/* ===== TYPOGRAPHY ===== */
+h1{
+  font-size:28px;
+  font-weight:700;
+  text-align:center;
+  letter-spacing:-.03em;
+  line-height:1.15;
+  margin-bottom:10px;
+  animation:fadeUp .6s .35s cubic-bezier(.16,1,.3,1) both;
+}
+
+h1 .gold{
+  background:linear-gradient(135deg,var(--gold-1),var(--gold-3),var(--gold-1));
+  background-size:200% 200%;
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+  animation:goldShift 3s ease-in-out infinite;
+}
+
+@keyframes goldShift{
+  0%,100%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+}
+
+.subtitle{
+  text-align:center;
+  font-size:14px;
+  font-weight:400;
+  color:var(--text-secondary);
+  line-height:1.65;
+  margin-bottom:24px;
+  animation:fadeUp .6s .4s cubic-bezier(.16,1,.3,1) both;
+}
+
+.subtitle strong{
+  color:var(--text-primary);
+  font-weight:600;
+}
+
+@keyframes fadeUp{
+  0%{opacity:0;transform:translateY(15px)}
+  100%{opacity:1;transform:translateY(0)}
+}
+
+/* ===== DIVIDER ===== */
+.divider{
+  height:1px;
+  background:linear-gradient(90deg,transparent,rgba(250,204,21,.15),transparent);
+  margin:4px 0 20px;
+  animation:fadeUp .6s .45s cubic-bezier(.16,1,.3,1) both;
+}
+
+/* ===== FEATURES ===== */
+.features{
+  list-style:none;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  margin-bottom:24px;
+}
+
+.features li{
+  display:flex;
+  align-items:flex-start;
+  gap:12px;
+  font-size:13.5px;
+  font-weight:400;
+  color:#D4D4D8;
+  line-height:1.5;
+  animation:fadeUp .6s both;
+}
+
+.features li:nth-child(1){animation-delay:.5s}
+.features li:nth-child(2){animation-delay:.55s}
+.features li:nth-child(3){animation-delay:.6s}
+.features li:nth-child(4){animation-delay:.65s}
+
+.feat-icon{
+  flex-shrink:0;
+  width:28px;height:28px;
+  border-radius:8px;
+  background:rgba(250,204,21,.08);
+  border:1px solid rgba(250,204,21,.1);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-top:1px;
+}
+
+.feat-icon iconify-icon{
+  font-size:14px;
+  color:var(--gold-1);
+}
+
+.features li strong{
+  color:var(--text-primary);
+  font-weight:600;
+}
+
+/* ===== CTA BUTTON ===== */
+.cta-wrap{
+  animation:fadeUp .6s .7s cubic-bezier(.16,1,.3,1) both;
+}
+
+.cta-btn{
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  width:100%;
+  padding:17px 24px;
+  background:linear-gradient(135deg,var(--gold-1),var(--gold-3));
+  color:#000;
+  text-decoration:none;
+  border:none;
+  border-radius:14px;
+  font-family:'Inter',sans-serif;
+  font-size:14.5px;
+  font-weight:700;
+  letter-spacing:.01em;
+  cursor:pointer;
+  transition:all .3s cubic-bezier(.16,1,.3,1);
+  overflow:hidden;
+  box-shadow:
+    0 0 0 1px rgba(250,204,21,.5),
+    0 8px 24px -4px rgba(250,204,21,.3),
+    0 0 40px -8px rgba(250,204,21,.2);
+}
+
+.cta-btn::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:linear-gradient(135deg,transparent 40%,rgba(255,255,255,.25) 50%,transparent 60%);
+  transform:translateX(-100%);
+  transition:transform .6s;
+}
+
+.cta-btn:hover{
+  transform:translateY(-2px);
+  box-shadow:
+    0 0 0 1px rgba(250,204,21,.7),
+    0 12px 32px -4px rgba(250,204,21,.4),
+    0 0 60px -8px rgba(250,204,21,.3);
+}
+
+.cta-btn:hover::before{
+  transform:translateX(100%);
+}
+
+.cta-btn:active{
+  transform:translateY(0) scale(.98);
+}
+
+.cta-btn iconify-icon{
+  font-size:18px;
+  transition:transform .3s;
+}
+
+.cta-btn:hover iconify-icon{
+  transform:translateX(3px);
+}
+
+/* ===== PULSE RING ON BUTTON ===== */
+.pulse-ring{
+  position:absolute;
+  inset:-3px;
+  border-radius:17px;
+  border:2px solid var(--gold-1);
+  opacity:0;
+  animation:pulseRing 2.5s ease-out infinite;
+  pointer-events:none;
+}
+
+@keyframes pulseRing{
+  0%{opacity:.6;transform:scale(1)}
+  100%{opacity:0;transform:scale(1.06)}
+}
+
+/* ===== TRUST NOTE ===== */
+.trust-note{
+  text-align:center;
+  font-size:11.5px;
+  color:var(--text-dim);
+  margin-top:16px;
+  line-height:1.7;
+  animation:fadeUp .6s .75s cubic-bezier(.16,1,.3,1) both;
+}
+
+.trust-note .lock{
+  color:var(--gold-3);
+}
+
+/* ===== LIVE COUNTER ===== */
+.live-counter{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  margin-top:14px;
+  animation:fadeUp .6s .8s cubic-bezier(.16,1,.3,1) both;
+}
+
+.live-dot{
+  width:7px;height:7px;
+  border-radius:50%;
+  background:#22C55E;
+  position:relative;
+}
+
+.live-dot::after{
+  content:'';
+  position:absolute;
+  inset:-3px;
+  border-radius:50%;
+  background:rgba(34,197,94,.3);
+  animation:livePing 1.5s ease-out infinite;
+}
+
+@keyframes livePing{
+  0%{opacity:1;transform:scale(1)}
+  100%{opacity:0;transform:scale(2)}
+}
+
+.live-text{
+  font-size:12px;
+  color:var(--text-secondary);
+  font-weight:400;
+}
+
+.live-text span{
+  color:#22C55E;
+  font-weight:600;
+  font-family:'JetBrains Mono',monospace;
+}
+
+/* ===== FOOTER ===== */
+.footer{
+  margin-top:20px;
+  padding-top:16px;
+  border-top:1px solid rgba(255,255,255,.04);
+  text-align:center;
+  animation:fadeUp .6s .85s cubic-bezier(.16,1,.3,1) both;
+}
+
+.footer-links{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:6px;
+  font-size:11px;
+  color:var(--text-dim);
+  margin-bottom:10px;
+}
+
+.footer-links a{
+  color:var(--text-secondary);
+  text-decoration:none;
+  transition:color .2s;
+}
+
+.footer-links a:hover{
+  color:var(--gold-1);
+}
+
+.footer-links .sep{
+  color:rgba(255,255,255,.1);
+}
+
+.advertised{
+  font-size:10.5px;
+  color:var(--text-dim);
+  line-height:1.6;
+}
+
+.advertised a{
+  color:var(--gold-3);
+  text-decoration:none;
+  font-weight:500;
+  transition:color .2s;
+}
+
+.advertised a:hover{
+  color:var(--gold-1);
+}
+
+.disclaimer{
+  font-size:10px;
+  color:rgba(255,255,255,.15);
+  margin-top:6px;
+}
+
+/* ===== SCROLLBAR ===== */
+::-webkit-scrollbar{width:6px}
+::-webkit-scrollbar-track{background:var(--dark-1)}
+::-webkit-scrollbar-thumb{background:var(--dark-5);border-radius:3px}
+::-webkit-scrollbar-thumb:hover{background:#333}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:480px){
+  body{padding:16px 12px}
+  .card{padding:28px 20px 22px;border-radius:20px}
+  h1{font-size:24px}
+  .logo-wrap{width:76px;height:76px}
+  .logo-inner{width:76px;height:76px}
+  .features li{font-size:13px}
+  .cta-btn{padding:15px 20px;font-size:14px}
+}
+</style>
 </head>
+
 <body>
-  <div class="container">
-    <img src="logo.jpg" alt="Telegram Logo" class="logo" />
-    <h1>Join TRADE WITH SUNIL</h1>
-    <p>🚀 Daily Accurate Calls<br>📈 Free Demo Access<br>🔐 Limited Members Only</p>
 
-    <div class="section-title">Master TRADING STRATEGIES</div>
-    <div class="benefit-text">Learn the TECHNIQUES & INTRADAY STOCK TIPS to Protect your Capital</div>
-    <div class="benefit-text">eLearn the PROCEDURES to Earn More while Investing Lesser Capital</div>
+<!-- Background effects -->
+<div class="glow-orb"></div>
+<div class="particles" id="particles"></div>
 
-    <a href="https://t.me/YourChannelUsername" target="_blank">
-      <button class="cta-btn">Join Free Channel</button>
-    </a>
+<!-- Main Card -->
+<div class="card">
 
-    <div class="countdown">Redirecting in <span id="timer">10</span> seconds...</div>
-
-    <p class="disclaimer">For educational purposes only. Not SEBI registered. DYOR.</p>
+  <!-- Logo -->
+  <div class="logo-wrap">
+    <div class="logo-glow"></div>
+    <div class="logo-ring"></div>
+    <div class="logo-inner">
+      <img src="krishna.png" alt="Krishna Crypto">
+    </div>
   </div>
 
-  <script>
-    let countdown = 10;
-    const timerEl = document.getElementById("timer");
-    const redirectUrl = "https://t.me/YourChannelUsername";
+  <!-- Badge -->
+  <div style="text-align:center">
+    <div class="badge">
+      <span class="dot"></span>
+      XAUUSD Education
+    </div>
+  </div>
 
-    const interval = setInterval(() => {
-      countdown--;
-      timerEl.textContent = countdown;
-      if (countdown === 0) {
-        clearInterval(interval);
-        window.location.href = redirectUrl;
-      }
-    }, 1000);
-  </script>
+  <!-- Heading -->
+  <h1>𝐇𝐢𝐭𝐮<span class="gold">𝐓𝐫𝐚𝐝𝐞𝐗</span></h1>
+
+  <!-- Subtitle -->
+  <p class="subtitle">
+    Master <strong>XAUUSD (Gold)</strong> using market structure &amp; rule-based trading.<br>
+    Pure education — no shortcuts, no hype.
+  </p>
+
+  <div class="divider"></div>
+
+  <!-- Features -->
+  <ul class="features">
+    <li>
+      <div class="feat-icon">
+        <iconify-icon icon="lucide:scan-search"></iconify-icon>
+      </div>
+      <span>Decode Gold market structure with clarity &amp; precision</span>
+    </li>
+    <li>
+      <div class="feat-icon">
+        <iconify-icon icon="lucide:shield-x"></iconify-icon>
+      </div>
+      <span>Learn <strong>when NOT to trade</strong> — the real edge</span>
+    </li>
+    <li>
+      <div class="feat-icon">
+        <iconify-icon icon="lucide:route"></iconify-icon>
+      </div>
+      <span>Rule-based system — <strong>Beginner → Intermediate</strong> path</span>
+    </li>
+    <li>
+      <div class="feat-icon">
+        <iconify-icon icon="lucide:users"></iconify-icon>
+      </div>
+      <span>Focused trader community — serious learners only</span>
+    </li>
+  </ul>
+
+  <!-- CTA -->
+  <div class="cta-wrap">
+    <a class="cta-btn"
+       href="https://telegram.me/+RtYa5kDb7EpjOGE1"
+       target="_blank"
+       rel="noopener noreferrer"
+       onclick="if(typeof fbq==='function'){fbq('track','Subscribe');}">
+      <span class="pulse-ring"></span>
+      <iconify-icon icon="lucide:send"></iconify-icon>
+      Join Private Telegram Classroom
+    </a>
+  </div>
+
+  <!-- Trust note -->
+  <p class="trust-note">
+    <span class="lock">🔒</span> No spam · Leave anytime · Trading involves risk
+  </p>
+
+  <!-- Live counter -->
+  <div class="live-counter">
+    <div class="live-dot"></div>
+    <span class="live-text"><span id="memberCount">2,847</span> traders in community</span>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <div class="footer-links">
+      <a href="https://elitepips.online/terms/" target="_blank">Terms</a>
+      <span class="sep">·</span>
+      <a href="https://elitepips.online/privacy/" target="_blank">Privacy</a>
+      <span class="sep">·</span>
+      <a href="https://elitepips.online/disclaimer/" target="_blank">Disclaimer</a>
+    </div>
+    <div class="advertised">
+      Advertised by <a href="https://telegram.me/+ifc6dyg-xiA2ZGE1" target="_blank"><strong>Digital Ads Expert</strong></a>
+    </div>
+    <div class="disclaimer">Not affiliated with Meta Platforms, Inc.</div>
+  </div>
+
+</div>
+
+<script>
+// ===== FLOATING PARTICLES =====
+(function(){
+  const container = document.getElementById('particles');
+  const count = 25;
+  for(let i = 0; i < count; i++){
+    const p = document.createElement('div');
+    p.className = 'particle';
+    p.style.left = Math.random() * 100 + '%';
+    p.style.width = p.style.height = (Math.random() * 3 + 1) + 'px';
+    p.style.animationDuration = (Math.random() * 8 + 6) + 's';
+    p.style.animationDelay = (Math.random() * 10) + 's';
+    p.style.opacity = '0';
+    container.appendChild(p);
+  }
+})();
+
+// ===== MEMBER COUNTER ANIMATION =====
+(function(){
+  const el = document.getElementById('memberCount');
+  const target = 2847;
+  const duration = 2000;
+  const start = performance.now();
+
+  function easeOutExpo(t){
+    return t === 1 ? 1 : 1 - Math.pow(2, -10 * t);
+  }
+
+  function update(now){
+    const elapsed = now - start;
+    const progress = Math.min(elapsed / duration, 1);
+    const value = Math.floor(easeOutExpo(progress) * target);
+    el.textContent = value.toLocaleString();
+    if(progress < 1) requestAnimationFrame(update);
+  }
+
+  setTimeout(() => requestAnimationFrame(update), 900);
+})();
+</script>
+
 </body>
 </html>
